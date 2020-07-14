@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="landscape" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UpDownApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="812" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="zVa-e6-urW">
+                                <rect key="frame" x="99" y="172.66666666666666" width="614" height="31"/>
+                                <connections>
+                                    <action selector="sliderValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="sUL-kS-faN"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Auw-J9-e8R">
+                                <rect key="frame" x="381" y="218.66666666666666" width="50" height="47.999999999999972"/>
+                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="checkmark.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="touchUpHitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PwX-CQ-N0W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7H-mL-nMl">
+                                <rect key="frame" x="720" y="37" width="28" height="25"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="memories" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="bold">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                                <connections>
+                                    <action selector="touchUpResetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="POG-qu-Lrl"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guess the Random Number!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="038-qV-05C">
+                                <rect key="frame" x="199.99999999999997" y="30" width="412.33333333333326" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PgB-of-J2v">
+                                <rect key="frame" x="396.66666666666669" y="135.66666666666666" width="19" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ms-wg-aFt">
+                                <rect key="frame" x="64" y="177" width="21" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O3Z-wR-1uX">
+                                <rect key="frame" x="392" y="325" width="28" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WH3-fN-KRT">
+                                <rect key="frame" x="64" y="37" width="26" height="26"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <color key="tintColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="info.circle" catalog="system">
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font" scale="large" weight="bold">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                    </preferredSymbolConfiguration>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNh-MK-b3L">
+                                <rect key="frame" x="727" y="177" width="21" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57667041593567214" green="1" blue="0.48562309415925486" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zVa-e6-urW" firstAttribute="top" secondItem="PgB-of-J2v" secondAttribute="bottom" constant="16" id="01k-DD-URY"/>
+                            <constraint firstItem="8ms-wg-aFt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1BO-T4-C60"/>
+                            <constraint firstItem="zVa-e6-urW" firstAttribute="centerY" secondItem="8ms-wg-aFt" secondAttribute="centerY" id="2Rh-jg-Ipp"/>
+                            <constraint firstItem="038-qV-05C" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Zb-Gg-thr"/>
+                            <constraint firstItem="O3Z-wR-1uX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4pA-oS-4Em"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="O3Z-wR-1uX" secondAttribute="bottom" constant="8" id="7DJ-0d-Spc"/>
+                            <constraint firstItem="PgB-of-J2v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BEJ-sP-uWj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="b7H-mL-nMl" secondAttribute="trailing" constant="20" id="DFa-vL-Cv2"/>
+                            <constraint firstItem="zVa-e6-urW" firstAttribute="leading" secondItem="8ms-wg-aFt" secondAttribute="trailing" constant="16" id="JBH-JE-yuY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rNh-MK-b3L" secondAttribute="trailing" constant="20" id="MVh-uu-jon"/>
+                            <constraint firstItem="Auw-J9-e8R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VEL-bm-MEZ"/>
+                            <constraint firstItem="WH3-fN-KRT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Yri-XX-lL4"/>
+                            <constraint firstItem="rNh-MK-b3L" firstAttribute="centerY" secondItem="8ms-wg-aFt" secondAttribute="centerY" id="aqW-HA-apj"/>
+                            <constraint firstItem="O3Z-wR-1uX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hPS-oc-XKe"/>
+                            <constraint firstItem="rNh-MK-b3L" firstAttribute="leading" secondItem="zVa-e6-urW" secondAttribute="trailing" constant="16" id="k6B-fP-lUv"/>
+                            <constraint firstItem="zVa-e6-urW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sYQ-bx-VDD"/>
+                            <constraint firstItem="zVa-e6-urW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="t4t-w1-Wcc"/>
+                            <constraint firstItem="Auw-J9-e8R" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tFD-MR-AtZ"/>
+                            <constraint firstItem="Auw-J9-e8R" firstAttribute="top" secondItem="zVa-e6-urW" secondAttribute="bottom" constant="16" id="v5T-vR-s3K"/>
+                            <constraint firstItem="038-qV-05C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="wTm-9W-Jdv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="slider" destination="zVa-e6-urW" id="dNg-k5-Oah"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="79.802955665024641" y="168.80000000000001"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.circle" catalog="system" width="128" height="121"/>
+        <image name="info.circle" catalog="system" width="128" height="121"/>
+        <image name="memories" catalog="system" width="128" height="107"/>
+    </resources>
+</document>
